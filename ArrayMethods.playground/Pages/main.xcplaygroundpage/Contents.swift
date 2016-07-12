@@ -9,14 +9,17 @@
  * [Array Iteration](https://github.com/learn-co-curriculum/swift-arrayIteration-readme)
  * [Array Methods](https://github.com/learn-co-curriculum/swift-arrayMethods-readme)
  
-
+ 
  */
 /*: question1
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
 // write your code here
 
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for day in daysOfTheWeek {
+    print(day)}
 
 
 
@@ -28,9 +31,10 @@
 // write your code here
 
 
+let numDaysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-
-
+for day in numDaysOfTheWeek {
+    print(day)}
 
 
 /*: question3
@@ -38,7 +42,12 @@
  */
 // write your code here
 
+var emptyArray : [String] = []
 
+if emptyArray.isEmpty {
+    print("The array is empty")}
+else {
+    print("The array contains: \(emptyArray)")}
 
 
 
@@ -52,6 +61,12 @@
 
 
 
+var reverseEmptyArray : [String] = []
+
+if !emptyArray.isEmpty {
+    print("The array contains: \(emptyArray)")}
+else {
+    print("The array is empty")}
 
 
 
@@ -64,7 +79,7 @@
 // write your code here
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -77,7 +92,11 @@
 
 
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for (index, days) in daysOfTheWeek.enumerate() {
+    print("\(index + 1). \(days)")}
 
 
 
@@ -89,10 +108,7 @@
 
 
 
-
-
-
-
+    print(daysOfTheWeek)
 /*: question8
  ### 8. Loop through the 'daysofTheWeek' array and change each value to lower case.
  */
@@ -111,8 +127,9 @@
 // write your code here
 
 
+    daysOfTheWeek.insert(daysOfTheWeek.last!, atIndex: 0)
+    daysOfTheWeek.popLast()
 
 
-
-
+    print(daysOfTheWeek)
 //: Check here on the solution branch for a link to the solutions
